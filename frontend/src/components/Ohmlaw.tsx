@@ -2,6 +2,7 @@ import './App.css'
 import Github from './Github'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
+import Navbar from './Navbar'
 export default function Ohmlaw(){
     type targetTypes = 'VOLTAGE'|'CURRENT'|'RESISTANCE'
     const [voltage,setVoltage] = useState(0)
@@ -20,8 +21,8 @@ export default function Ohmlaw(){
     }
     return (
         <div className='font-mono'>
+            <Navbar />
             <div className='flex justify-center items-center flex-col'>
-                <button className='border border-black rounded-lg p-2 absolute top-5 left-5'><Link to='/'>Home</Link></button>
                 <h4>Ohm's Law Calculator</h4>
                 <h1>Voltage(V) = Current(A) x Resistance(Ω)</h1>
                 <h3>Target: {target.toLowerCase()}</h3>

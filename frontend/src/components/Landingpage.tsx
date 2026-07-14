@@ -1,8 +1,10 @@
 import './App.css'
 import {Link} from 'react-router-dom'
+import Navbar from './Navbar'
 export default function Landingpage(){
     return (
         <div className='font-mono'>
+            <Navbar />
             <div className='flex justify-center items-center flex-col'>
                 <div>
                     <h1>Electronics Info Site</h1>
@@ -12,7 +14,7 @@ export default function Landingpage(){
                             <h3>Formula calculators</h3>
                             <ul className='style-none'>
                                 <li><Link to='/ohmLaw'>Ohm's Law calculator</Link></li>
-                                <li><Link to='/ohmLaw'>Resistor Color Code Decoder</Link></li>
+                                <li><Link to='/resistor'>Resistor Color Code Decoder</Link></li>
                             </ul>
                         </div>
                         <div>
